@@ -1,0 +1,28 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exodapt-robot-pt"
+version = "0.0.1"
+description = "Prompt templates for Exodapt AI robots"
+readme = "README.md"
+authors = [{ name = "Robin Karlsson", email = "robin.karlsson0@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.12"
+
+[project.optional-dependencies]
+dev = ["yapf", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/robin-karlsson0/exodapt_robot_pt"
+
+[project.scripts]
+exodapt_robot_pt = "exodapt_robot_pt.__main__:main"
+
+dependencies = []
