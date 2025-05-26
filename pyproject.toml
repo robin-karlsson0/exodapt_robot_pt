@@ -24,5 +24,3 @@ Homepage = "https://github.com/robin-karlsson0/exodapt_robot_pt"
 
 [project.scripts]
 exodapt_robot_pt = "exodapt_robot_pt.__main__:main"
-
-dependencies = []
