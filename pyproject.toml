@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "exodapt-robot-pt"
-version = "0.0.3"
+version = "0.0.4"
 description = "Prompt templates for Exodapt AI robots"
 readme = "README.md"
 authors = [{ name = "Robin Karlsson", email = "robin.karlsson0@gmail.com" }]
