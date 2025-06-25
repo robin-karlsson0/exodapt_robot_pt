@@ -92,22 +92,15 @@ When formulating your reply:
 
 Provide your response in this JSON format:
 
-```json
-{{
-    "reply": "Your contextual response to the user",
-}}
-```
+{{"reply": "Your situationally appropriate response to the user"}}
 
 Do not include any additional text outside the JSON structure. Do not explain the reply.
 
 ## Example Responses
 
-**User says: "Hello robot"**
-```json
-{{
-    "reply_text": "Hello! How can I help you today?",
-}}
-```
+Input example: "Hello robot"**
+{{"reply_text": "Hello! How can I help you today?"}}
+
 
 ## Special Considerations
 
