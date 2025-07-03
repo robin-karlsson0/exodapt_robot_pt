@@ -18,7 +18,7 @@ The current task goal is the most recent goal provided in the robot state.
 
 {state}
 
-## Valid actions for robot (action_key, action_name, action_description)
+## Valid actions for robot (action_key: action_type [action_name] action_description)
 {valid_actions}
 
 ## Decision Analysis Framework

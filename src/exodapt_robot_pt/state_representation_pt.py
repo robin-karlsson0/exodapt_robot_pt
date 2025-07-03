@@ -81,11 +81,13 @@ data: INFORMATION  # State chunk information content sent to the topic
 
 The following is a list of topic names and their descriptions:
 /asr: Automatic speech recognition. Talk robot hears from a microphone.
+/keyboard_input: Messages the user wrote on a keyboard and sent to the robot.
 /reply_action: What the robot has said to the user as a result of a reply action.
 
 3. List of currently running actions.
-Each running action is represented as follows:
-action_name (action_key)
+Each running action is represented by the following format:
+action_key: [action_name] action_description
+Only one type of action (e.g. an action with the same action_key) can run at one time. Different types of actions (e.g. actions with different action_keys) can run in parallel.
 
 4. Robot state information such as current time, location, battery level, etc.
 """)
