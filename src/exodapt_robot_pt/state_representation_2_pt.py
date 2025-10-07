@@ -78,7 +78,7 @@ def dynamic_state_suffix_pt(
     return dynamic_state_suffix
 
 
-def state_representation_pt(
+def state_representation_2_t(
     # Static state prefix
     static_robot_description: str = '',
     static_state_repr_struct: str = '',
