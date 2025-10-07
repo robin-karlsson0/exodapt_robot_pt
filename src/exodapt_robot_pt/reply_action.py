@@ -99,7 +99,7 @@ Do not include any additional text outside the JSON structure. Do not explain th
 ## Example Responses
 
 Input example: "Hello robot"**
-{{"reply_text": "Hello! How can I help you today?"}}
+{{"reply": "Hello! How can I help you today?"}}
 
 
 ## Special Considerations
