@@ -57,36 +57,12 @@ def appended_state_chunks_pt(state_chunks: str = 'None', ) -> str:
 
 
 def dynamic_state_suffix_pt(
-    dynamic_situation_assessment: str = '',
-    dynamic_current_context_summary: str = '',
-    dynamic_retrieved_mem: str = '',
     dynamic_running_actions: str = '',
     dynamic_robot_state_info: str = '',
 ) -> str:
     """Returns the dynamic state suffix part of the state representation."""
 
     dynamic_state_suffix = []
-
-    if dynamic_situation_assessment:
-        dynamic_state_suffix.append(f"""# Situation Assessment
-<situation_assessment>
-{dynamic_situation_assessment}
-</situation_assessment>
-""")
-
-    if dynamic_current_context_summary:
-        dynamic_state_suffix.append(f"""# Current Context Summary
-<current_context_summary>
-{dynamic_current_context_summary}
-</current_context_summary>
-""")
-
-    if dynamic_retrieved_mem:
-        dynamic_state_suffix.append(f"""# Retrieved Memory
-<retrieved_memory>
-{dynamic_retrieved_mem}
-</retrieved_memory>
-""")
 
     if dynamic_running_actions:
         dynamic_state_suffix.append(f"""# Running Ongoing Actions
@@ -112,9 +88,6 @@ def state_representation_pt(
     # Appended state chunks
     appended_state_chunks: str = '',
     # Dynamic state suffix
-    dynamic_situation_assessment: str = '',
-    dynamic_current_context_summary: str = '',
-    dynamic_retrieved_mem: str = '',
     dynamic_running_actions: str = '',
     dynamic_robot_state_info: str = '',
 ) -> str:
@@ -135,12 +108,6 @@ def state_representation_pt(
             - Internal thoughts
 
         # Dynamic state suffix
-          - Situation assessment
-          - Current context summary
-          - Retrieved memory
-            - Procedural memory (TBD ?)
-            - Episodic memory (TBD ?)
-            - Semantic memory (TBD ?)
           - Running actions
           - Robot state information (current time, location, etc.)
 
@@ -183,9 +150,6 @@ def state_representation_pt(
 
     state.append(
         dynamic_state_suffix_pt(
-            dynamic_situation_assessment,
-            dynamic_current_context_summary,
-            dynamic_retrieved_mem,
             dynamic_running_actions,
             dynamic_robot_state_info,
         ))
@@ -235,12 +199,6 @@ ts: 2025-10-06 22:55:08
 data: <User said> "How are you today?"
 ---"""
 
-    dynamic_situation_assessment = """A user is greeting me and I should greet the user back in a snarky way to maximize interestingness."""
-
-    dynamic_current_context_summary = """I am in the early introduction phase with a user."""
-
-    dynamic_retrieved_mem = """My mind is a blank slate and thus no memories relevant to the current situation can be retrieved."""
-
     dynamic_running_actions = """Reply: The robot is currently replying to the user based on the state information when the reply action was initiated."""
 
     dynamic_robot_state_info = """Current time: 2025-09-04 10:34:03
@@ -257,9 +215,6 @@ Current location: TBD"""
         # Appended state chunks
         appended_state_chunks,
         # Dynamic state suffix
-        dynamic_situation_assessment,
-        dynamic_current_context_summary,
-        dynamic_retrieved_mem,
         dynamic_running_actions,
         dynamic_robot_state_info,
     )
