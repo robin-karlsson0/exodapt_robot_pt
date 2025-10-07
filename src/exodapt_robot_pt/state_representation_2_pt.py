@@ -78,7 +78,7 @@ def dynamic_state_suffix_pt(
     return dynamic_state_suffix
 
 
-def state_representation_2_t(
+def state_representation_2_pt(
     # Static state prefix
     static_robot_description: str = '',
     static_state_repr_struct: str = '',
@@ -205,7 +205,7 @@ data: <User said> "How are you today?"
 Current location: TBD"""
 
     # Remove leading/trailing line breaks
-    state = state_representation_pt(
+    state = state_representation_2_pt(
         # Static state prefix
         static_robot_description,
         static_state_repr_struct,
